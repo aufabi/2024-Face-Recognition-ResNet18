@@ -1,6 +1,6 @@
-# Keterangan Files
-Tugas dari IndonesiaAI terkait face recognition untuk gender classification. Pada repositori ini berisi percobaan yang saya lakukan yaitu ResNet18. Terdapat dua file pada repository ini:
-1. Percobaan Resnet18 Versi Pertama Data Celeba Asli: file code percobaan pertama yang masih menggunakan images dari Celeba langsung dengan menggunakan ResNet18
-2. Percobaan_Resnet18_Lr0_001_data_5000: file percobaan ResNet18 pada data dari Indonesia AI menggunakan ResNet18
+# Face Recognition - Gender Classification
+This is my face recognition project from the Computer Vision Bootcamp at Indonesia AI. This repository contains the experiments that I did, namely ResNet18. There are two files in this repository:
+1. Percobaan Resnet18 Versi Pertama Data Celeba Asli.ipynb: my first approach, which uses the original data from Celeba,
+2. Percobaan_Resnet18_Lr0_001_data_5000.ipynb: my final version, which uses the data from Indonesia AI.
 
-Adapun yang saya submit untuk keperluan kelompok adalah file no 2.
+What I submitted for the group project is file no. 2.
