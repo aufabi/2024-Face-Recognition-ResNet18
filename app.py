@@ -2,11 +2,13 @@ import streamlit as st
 import torch
 import torch.nn as nn
 import torchvision.transforms as transforms
+import gdown
 from PIL import Image
+from torchvision import models
 
 # Load trained model
 def load_model(model_path):
-    model = torch.hub.load('pytorch/vision:v0.10.0', 'resnet18', pretrained=False)
+    model = models.resnet18(pretrained=False)
     model.fc = nn.Linear(model.fc.in_features, 2)
     
     # Load saved model
@@ -37,6 +39,11 @@ if uploaded_file is not None:
     st.image(image, caption="Uploaded Image", use_column_width=True)
     
     # Load model and predict
+    file_id = "1Em17IJlCY0TC8RIto-ZU_up6Qg0w8-tr"
+    url = f"https://drive.google.com/uc?id={file_id}"
+    output = "point_resnet18_best.pth"
+    gdown.download(url, output, quiet=False)
+    
     model = load_model("point_resnet18_best.pth")
     image_tensor = transform(image).unsqueeze(0)
     with torch.no_grad():
